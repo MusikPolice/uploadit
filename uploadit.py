@@ -5,6 +5,7 @@ import logging
 import os
 import sys
 
+import uploadit
 from uploadit import mp3tag
 
 class Uploadit():
@@ -28,7 +29,7 @@ class Uploadit():
 			self.log.debug("Found section %s" % section)
 
 			if section == 'Mp3Tag':
-				if not mp3tag.has_prerequisites():
+				if not uploadit.has_mp3tag_prerequisites():
 					self.log.warning('Failed to import the required libraries for Mp3Tag functionality.')
 					break
 				mp3tag.Write(path, self.log, conf)
@@ -43,7 +44,7 @@ class Uploadit():
 		conf.set('Mp3Tag', 'metadata-file', 'metadata.txt')
 		conf.set('Mp3Tag', 'title', 'Episode 1: Some Jerks Talk about Stuff')
 		conf.set('Mp3Tag', 'artist', 'Podcasting Jerks')
-		conf.set('Mp3Tag', 'album', 'Podcasting Jerks Podcast')
+		conf.set('Mp3Tag', 'genre', 'Podcast')
 		conf.write(config)
 
 

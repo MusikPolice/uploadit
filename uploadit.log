@@ -20,3 +20,14 @@
 2013-01-06 20:58:19,631 - INFO - Processing the file upload.py with the configuration supplied in uploadit.conf
 2013-01-06 20:58:19,631 - DEBUG - Found section Mp3Tag
 2013-01-06 20:58:19,632 - WARNING - Failed to import the required libraries for Mp3Tag functionality.
+2013-01-06 21:14:01,790 - INFO - Processing the file test.mp3 with the configuration supplied in uploadit.conf
+2013-01-06 21:14:01,790 - DEBUG - Found section Mp3Tag
+2013-01-06 21:15:42,693 - INFO - Processing the file test.mp3 with the configuration supplied in uploadit.conf
+2013-01-06 21:15:42,693 - DEBUG - Found section Mp3Tag
+2013-01-06 21:15:50,407 - INFO - Processing the file test.mp3 with the configuration supplied in uploadit.conf
+2013-01-06 21:15:50,408 - DEBUG - Found section Mp3Tag
+2013-01-06 21:17:08,505 - INFO - Processing the file test.mp3 with the configuration supplied in uploadit.conf
+2013-01-06 21:17:08,506 - DEBUG - Found section Mp3Tag
+2013-01-06 21:17:08,508 - DEBUG - Writing tag album=Podcasting Jerks Podcast
+2013-01-06 21:17:08,509 - DEBUG - Writing tag artist=Podcasting Jerks
+2013-01-06 21:17:08,509 - DEBUG - Writing tag title=Episode 1: Some Jerks Talk about Stuff
