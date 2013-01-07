@@ -1,0 +1,22 @@
+2013-01-06 20:29:28,159 - INFO - Generating default config file
+2013-01-06 20:32:21,307 - INFO - Generating default config file
+2013-01-06 20:32:46,805 - INFO - Generating default config file
+2013-01-06 20:35:57,001 - INFO - Generating default config file
+2013-01-06 20:36:18,228 - INFO - Processing the file upload.py.
+2013-01-06 20:36:18,229 - DEBUG - Found section Mp3Tag
+2013-01-06 20:39:15,598 - INFO - Processing the file upload.py with the configuration supplied in sample.conf
+2013-01-06 20:39:15,598 - DEBUG - Found section Mp3Tag
+2013-01-06 20:39:23,837 - INFO - Writing sample config file to sample.conf
+2013-01-06 20:41:30,171 - INFO - Writing sample config file to uploadit.conf
+2013-01-06 20:46:27,027 - INFO - Processing the file upload.py with the configuration supplied in uploadit.conf
+2013-01-06 20:46:27,028 - DEBUG - Found section Mp3Tag
+2013-01-06 20:46:46,171 - INFO - Processing the file upload.py with the configuration supplied in uploadit.conf
+2013-01-06 20:46:46,172 - DEBUG - Found section Mp3Tag
+2013-01-06 20:47:45,394 - INFO - Processing the file upload.py with the configuration supplied in uploadit.conf
+2013-01-06 20:47:45,394 - DEBUG - Found section Mp3Tag
+2013-01-06 20:47:45,397 - DEBUG - Marshalling mp3tag
+2013-01-06 20:47:58,915 - INFO - Processing the file upload.py with the configuration supplied in uploadit.conf
+2013-01-06 20:47:58,915 - DEBUG - Found section Mp3Tag
+2013-01-06 20:58:19,631 - INFO - Processing the file upload.py with the configuration supplied in uploadit.conf
+2013-01-06 20:58:19,631 - DEBUG - Found section Mp3Tag
+2013-01-06 20:58:19,632 - WARNING - Failed to import the required libraries for Mp3Tag functionality.
