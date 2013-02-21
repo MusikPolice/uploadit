@@ -4,6 +4,7 @@ import argparse
 import logging
 import os
 import sys
+import codecs
 
 import uploadit
 from uploadit import mp3tag
@@ -25,6 +26,7 @@ class Uploadit():
 
 		conf = ConfigParser()
 		conf.readfp(config)
+			
 		for section in conf.sections():
 			self.log.debug("Found section %s" % section)
 
@@ -81,7 +83,7 @@ def _open_file_for_read(path):
 	"""Opens the file specified by path for reading. Returns the opened file object.
 	If the file does not exist or cannot be opened for reading, an argparse.ArgumentTypeError is thrown"""
 	try:
-		return open(path, 'r')
+		return codecs.open(path, 'r', encoding='utf-8')			
 	except:
 		raise argparse.ArgumentTypeError('Could not open file %s for reading.' % path)
 

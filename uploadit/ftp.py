@@ -1,0 +1,4 @@
+import ftplib
+
+class Upload():
+    
