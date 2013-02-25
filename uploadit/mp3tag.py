@@ -1,5 +1,4 @@
 from mutagen.easyid3 import EasyID3
-from mutagen.mp3 import MP3
 
 class Write():
 	log = None
@@ -9,7 +8,7 @@ class Write():
 		self.log = log
 
 		# open the path for writes
-		mp3 = MP3(path, ID3=EasyID3)
+		mp3 = EasyID3(path)
 
 		# write any static metadata values that appear in the config file to the id3 tags	
 		for option in config.options("Mp3Tag"):
