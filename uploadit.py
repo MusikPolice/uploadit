@@ -4,9 +4,10 @@ import argparse
 import logging
 import os
 import sys
+import codecs
 
 import uploadit
-from uploadit import mp3tag
+from uploadit import mp3tag, ftp
 
 class Uploadit():
 	log = None
@@ -25,6 +26,7 @@ class Uploadit():
 
 		conf = ConfigParser()
 		conf.readfp(config)
+			
 		for section in conf.sections():
 			self.log.debug("Found section %s" % section)
 
@@ -33,6 +35,8 @@ class Uploadit():
 					self.log.warning('Failed to import the required libraries for Mp3Tag functionality.')
 					break
 				mp3tag.Write(path, self.log, conf)
+			elif section == 'ftp':
+				ftp.Upload(path, self.log, conf)
 
 
 	def generate_default_config(self, config):
@@ -81,7 +85,7 @@ def _open_file_for_read(path):
 	"""Opens the file specified by path for reading. Returns the opened file object.
 	If the file does not exist or cannot be opened for reading, an argparse.ArgumentTypeError is thrown"""
 	try:
-		return open(path, 'r')
+		return open(path, 'r')			
 	except:
 		raise argparse.ArgumentTypeError('Could not open file %s for reading.' % path)
 
@@ -91,7 +95,7 @@ def _open_file_for_write(path):
 	Returns the opened file object. If the cannot be opened for writing or created, an
 	argparse.ArgumentTypeError is thrown"""
 	try:
-		return open(path, 'w')
+		return open(path, 'w')	
 	except:
 		raise argparse.ArgumentTypeError('Could not create or open file %s for writing.' % path)
 

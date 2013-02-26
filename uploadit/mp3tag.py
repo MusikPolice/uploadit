@@ -10,13 +10,15 @@ class Write():
 		# open the path for writes
 		mp3 = EasyID3(path)
 
-		# write any static metadata values that appear in the config file to the id3 tags
-		for key in EasyID3.valid_keys.keys():
-			if config.has_option('Mp3Tag', key):
-				log.debug('Writing tag %s=%s' % (key,config.get('Mp3Tag', key)))
-				mp3[key] = config.get('Mp3Tag', key)
-
+		# write any static metadata values that appear in the config file to the id3 tags	
+		for option in config.options("Mp3Tag"):
+			if option in EasyID3.valid_keys.keys():
+				log.debug('Writing tag %s=%s' % (option,config.get('Mp3Tag', option)))
+				mp3[option] = config.get('Mp3Tag', option)
+			else:
+				log.debug("Invalid tag: %s", option)
+				
 		# process episode-specific metadata keys
 
-		# add each of the metadata tags
+		# add each of the metadata tag
 		mp3.save()
